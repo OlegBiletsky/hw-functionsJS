@@ -136,9 +136,10 @@ alert(getDay4(3));
 //4. Реалізуйте функцію знаходження факторіала
 alert('task4');
 
-
-
-
+function factorial(n) {
+    return (n != 1) ? n * factorial(n - 1) : 1;
+}
+alert( factorial(5) );
 
 
 
