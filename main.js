@@ -1,5 +1,5 @@
 //1. Напишіть функцію, що повертає куб числа.
-/*
+
 
 alert('task1');
 //******************************************
@@ -61,7 +61,23 @@ console.log(action3(1,2,3));
 //3. Напишіть функцію, що приймає число від 1 до 7 і повертає відповідну назву дня.
 alert('task3');
 
+week = {
+    1: {day: "Monday"},
+    2: {day: "Tuesday"},
+    3: {day: "Wednesday"},
+    4: {day: "Thursday"},
+    5: {day: "Friday"},
+    6: {day: "Saturday"},
+    7: {day: "Sunday"},
+}
 
+
+let getDay4 = (numberDayOfWeek) => {
+        const obj = week[numberDayOfWeek];
+        return obj ? obj.day : 'неправильний номер'  //obj['day']
+    }
+alert(getDay4(3));
+//******************************************
 function getDay (numberOfDay) {
     switch (numberOfDay) {
         case 1 : return "monday";
@@ -105,23 +121,7 @@ let getDay3 = (numberOfDay) => {
 console.log(getDay3(8));
 
 //******************************************
-week = {
-    1: {day: "Monday"},
-    2: {day: "Tuesday"},
-    3: {day: "Wednesday"},
-    4: {day: "Thursday"},
-    5: {day: "Friday"},
-    6: {day: "Saturday"},
-    7: {day: "Sunday"},
-}
 
-//obj['day']
-
-let getDay4 = (numberDayOfWeek) => {
-        const obj = week[numberDayOfWeek];
-        return obj ? obj.day : 'неправильний номер'
-    }
-alert(getDay4(3));
 
 
 
@@ -157,11 +157,15 @@ alert( Factorial(4) );
 
 
 
+
+
+
 //5. Напишіть функцію яка отримує години хвилини та секунди і повертає це число в секундах.
 alert('task5');
 
 let h, m, s;
 const COEF_H = 3600, COEF_M = 60;
+
 
 
 function Time (h, m, s) {
@@ -179,7 +183,6 @@ console.log(Time2(1, 20, 50), '2');
 let h, m, s;
 const COEF_H = 3600, COEF_M = 60;
 
-
 let Time3 = (h, m, s) =>  (h*COEF_H + m*COEF_M + s);
 console.log(Time3(23, 59, 59), '3');
 
@@ -190,7 +193,10 @@ console.log(Time3(23, 59, 59), '3');
 
 
 
-*/
+
+
+
+
 //6. Написати функцію , яка приймає секунди, і перетворює їх у години хвилини та секунди у форматі «гг:хх:сс». якщо кількість годин більша за 23.59.59 - вивести повідомлення "Більше одного дня". 86400s==24h
 alert('task6');
 let secundInput, hours, minutes, secunds, s, output;
