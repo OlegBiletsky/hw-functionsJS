@@ -175,21 +175,60 @@ let Time2 = function (h, m, s) {
 }
 console.log(Time2(1, 20, 50), '2');
 //******************************************
+
+let h, m, s;
+const COEF_H = 3600, COEF_M = 60;
+
+
 let Time3 = (h, m, s) =>  (h*COEF_H + m*COEF_M + s);
-console.log(Time3(1, 20, 50), '3');
+console.log(Time3(23, 59, 59), '3');
+
+
+
 
 
 
 
 
 */
-
-
-
-
-//6. Написати функцію , яка приймає секунди, і перетворює їх у години хвилини та секунди у форматі «гг:хх:сс». якщо кількість годин більша за 23.59.59 - вивести повідомлення "Більше одного дня".
+//6. Написати функцію , яка приймає секунди, і перетворює їх у години хвилини та секунди у форматі «гг:хх:сс». якщо кількість годин більша за 23.59.59 - вивести повідомлення "Більше одного дня". 86400s==24h
 alert('task6');
+let secundInput, hours, minutes, secunds, s, output;
 
+function Clock (secundInput) {
+    if (secundInput <=86400) {
+            hours = Math.floor(secundInput / 3600);
+            console.log(hours, 'год');
+
+            s = secundInput - (hours * 3600);
+
+            minutes = Math.floor(s / 60);
+            console.log(minutes, 'хв');
+
+            secunds = s - (minutes * 60);
+            console.log(secunds, 'сек');
+
+            if (hours < 10) {
+                hours = '0'+hours;
+            }
+            if (minutes < 10) {
+                minutes = '0'+minutes;
+            }
+            if (secunds < 10) {
+                secunds = '0'+secunds;
+            }
+
+            output = ` ${hours}:${minutes}:${secunds} `;
+    } else {
+            output = "Більше одного дня";
+    }
+       
+    return output;
+}
+
+
+console.log(Clock(3599));
+alert(Clock(3599));
 
 
 
