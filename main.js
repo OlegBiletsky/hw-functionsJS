@@ -200,7 +200,7 @@ alert('task6');
 let secundInput, hours, minutes, secunds, s, output;
 
 function Clock (secundInput) {
-    if (secundInput <=86400) {
+    if (secundInput <=86399) {
             hours = Math.floor(secundInput / 3600);
             console.log(hours, 'год');
 
