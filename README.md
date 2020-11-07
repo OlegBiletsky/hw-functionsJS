@@ -35,17 +35,17 @@
 И наконец, разница между **let и const** в том, что в первом случае вы можете изменить значение переменной, а во втором нет.
 >
 
-**var VS let VS const**
+### var VS let VS const
 >
-var: 
+**var:** 
   - function scoped
   - undefined when accessing a variable before it's declared
 >
-let: 
+**let:** 
   - block scoped
   - ReferenceError when accessing a variable before it's declared
 >
-const:
+**const:**
   - block scoped
   - ReferenceError when accessing a variable before it's declared can't be reassigned`
   
